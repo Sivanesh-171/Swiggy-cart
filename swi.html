@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodExpress - Order Your Favorite Food</title>
+    <link rel="stylesheet" href="swi.css">
+    <script src="swi.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo" onclick="showPage('home')">🍔 FoodExpress</div>
+            <div class="cart-icon" onclick="showPage('cart')">
+                🛒
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="homePage" class="page active">
+        <div class="container">
+            <div class="search-filter">
+                <input type="text" class="search-box" id="searchBox" placeholder="Search for dishes...">
+                <div class="category-filters">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="pizza">Pizza</button>
+                    <button class="category-btn" data-category="burger">Burger</button>
+                    <button class="category-btn" data-category="indian">Indian</button>
+                    <button class="category-btn" data-category="chinese">Chinese</button>
+                    <button class="category-btn" data-category="dessert">Dessert</button>
+                </div>
+            </div>
+            <div class="menu-grid" id="menuGrid"></div>
+        </div>
+    </div>
+
+    <!-- Cart Page -->
+    <div id="cartPage" class="page">
+        <div class="container">
+            <div class="cart-header">
+                <h1 class="cart-title">Your Cart</h1>
+                <button class="back-btn" onclick="showPage('home')">← Continue Shopping</button>
+            </div>
+            <div id="cartContent"></div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
